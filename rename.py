@@ -13,8 +13,11 @@ filenames = os.listdir(path)
 episode_counter = 1
 
 # loops through all the files in the video folder and renames each one with the show name, the season, and the iterated episode number, if no files prints error.
-for files in filenames:
-    filename, file_extension = os.path.splitext(files)
-    os.rename(path + "\\" + filename + file_extension, path + "\\" + show_name + " " + "s" +
-        str(current_season).zfill(2) + "e" + str(episode_counter).zfill(2) + file_extension)
-    episode_counter = episode_counter + 1
+if filenames:
+    for files in filenames:
+        filename, file_extension = os.path.splitext(files)
+        os.rename(path + "\\" + filename + file_extension, path + "\\" + show_name + " " + "s" +
+            str(current_season).zfill(2) + "e" + str(episode_counter).zfill(2) + file_extension)
+        episode_counter = episode_counter + 1
+else:
+    print("Opps! No files in the folder to rename.")
