@@ -3,7 +3,7 @@
 
 import os
 
-# get the name of the show and the current season
+# get the name of the show and the current season from the user
 show_name = input("What is the show's name?")
 current_season = input("What is the current season?")
 
