@@ -8,7 +8,7 @@ from natsort import natsorted #using this module to natural sort the files by ep
 show_name = input("What is the show's name?")
 current_season = input("What is the current season?")
 
-# gets the list of files in the anime folder for renaming and sets the episode counter
+# gets the list of files in the anime folder for renaming,sets the episode counter and sorts the files by episode using a natural sort on the name string of the files
 path = os.path.join(r"C:\Users\troym\Downloads\Video")
 filenames = os.listdir(path)
 natsorted(filenames)
