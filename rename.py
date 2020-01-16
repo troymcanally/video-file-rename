@@ -6,8 +6,8 @@ import os
 import natsort as ns
 
 # get the name of the show and the current season from the user
-show_name = input("What is the show's name?")
-current_season = input("What is the current season?")
+show_name = input("What is the show's name? ")
+current_season = input("What is the current season? ")
 
 # gets the list of files in the anime folder for renaming,sets the episode counter and sorts the files by episode using a natural sort on the name string of the files
 path = os.path.join(r"C:\Users\troym\Downloads\Video")
