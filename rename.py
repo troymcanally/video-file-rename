@@ -15,6 +15,8 @@ filenames = os.listdir(path)
 filesort = ns.natsorted(filenames)
 episode_counter = 1
 
+# testing git connectivity in vs code
+
 # if statement to check if filesort list is empty
 if filesort:
     # loops through all the files in the video folder and renames each one with the show name, the season, and the iterated episode number, if no files prints error
