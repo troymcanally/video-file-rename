@@ -2,6 +2,8 @@
 # Author: Trojan
 
 import os
+import shutil
+import glob
 # using this module to natural sort the files by episode number.
 import natsort as ns
 
@@ -15,9 +17,7 @@ filenames = os.listdir(path)
 filesort = ns.natsorted(filenames)
 episode_counter = 1
 
-# testing git connectivity in vs code
-
-# if statement to check if filesort list is empty
+# if statement, to check if filesort list is empty
 if filesort:
     # loops through all the files in the video folder and renames each one with the show name, the season, and the iterated episode number, if no files prints error
     for files in filesort:
@@ -27,3 +27,15 @@ if filesort:
         episode_counter = episode_counter + 1
 else:
     print("Opps! No files in the folder to rename.")
+
+os.mkdir(fr"C:\Users\troym\Downloads\Video\{show_name}")
+season_folder = os.mkdir(fr"C:\Users\troym\Downloads\Video\{show_name}\Season {current_season}")
+
+season_folder_dir = os.path.join(fr"C:\Users\troym\Downloads\Video\{show_name}\Season {current_season}")
+
+files = os.listdir(path)
+
+for file in files:
+    filename, file_extension = os.path.splitext(file)
+    if file_extension != "":
+        shutil.move(path + "\\" + file, season_folder_dir)
