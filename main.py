@@ -27,10 +27,13 @@ def rename():
     else:
         print("Opps! No files in the folder to rename.")
 
-    os.mkdir(fr"C:\Users\troym\Downloads\Video\{show_name}")
-    os.mkdir(fr"C:\Users\troym\Downloads\Video\{show_name}\Season {current_season}")
-
-    season_folder_dir = os.path.join(fr"C:\Users\troym\Downloads\Video\{show_name}\Season {current_season}")
+    if int(current_season) < 2:
+        os.mkdir(fr"C:\Users\troym\Downloads\Video\{show_name}")
+        os.mkdir(fr"C:\Users\troym\Downloads\Video\{show_name}\Season {current_season}")
+        season_folder_dir = os.path.join(fr"C:\Users\troym\Downloads\Video\{show_name}\Season {current_season}")
+    else:
+        os.mkdir(fr"C:\Users\troym\Downloads\Video\Season {current_season}")
+        season_folder_dir = os.path.join(fr"C:\Users\troym\Downloads\Video\Season {current_season}")
 
     files = os.listdir(path)
 
