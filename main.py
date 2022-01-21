@@ -1,3 +1,7 @@
+# Make a new alias for powershell using:
+# New-Alias "rename" "*path to script folder*/VideoRename.ps1"
+# Video rename.ps1 is just py *path to script*/main.py
+
 import os
 import shutil
 import natsort as ns
